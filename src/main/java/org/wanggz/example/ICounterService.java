@@ -1,4 +1,4 @@
-package org.wanggz.service;
+package org.wanggz.example;
 
 public interface ICounterService {
 
