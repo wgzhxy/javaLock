@@ -1,6 +1,6 @@
 package org.wanggz.internal;
 
-import org.wanggz.service.CouterServiceImpl;
+import org.wanggz.example.CouterServiceImpl;
 
 public class MutilThreadsMain {
 	

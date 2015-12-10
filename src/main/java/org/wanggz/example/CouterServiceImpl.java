@@ -1,4 +1,4 @@
-package org.wanggz.service;
+package org.wanggz.example;
 
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -12,7 +12,7 @@ public class CouterServiceImpl implements ICounterService {
 		total += 1;
 		return total;
 	}
-	
+
 	public synchronized int decrement() {
 		counter.incrementAndGet();
 		total += 1;

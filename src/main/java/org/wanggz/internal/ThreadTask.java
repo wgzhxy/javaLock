@@ -1,15 +1,15 @@
 package org.wanggz.internal;
 
-import org.wanggz.service.ICounterService;
+import org.wanggz.example.ICounterService;
 
 public class ThreadTask extends Thread {
-	
+
 	private ICounterService service;
-	
+
 	public ThreadTask(ICounterService service) {
 		this.service = service;
 	}
-	
+
 	@Override
 	public void run() {
 		try {
