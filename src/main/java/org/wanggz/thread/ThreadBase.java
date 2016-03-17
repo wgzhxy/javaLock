@@ -10,6 +10,7 @@ public class ThreadBase {
         Thread t1 = new Thread(threadGroup, new Runnable() {
             public void run() {
                 try {
+
                     System.out.println("running begin ~~~~~~~~~!");
                     Thread.sleep(2000);
                     System.out.println("running end ~~~~~~~~~!");

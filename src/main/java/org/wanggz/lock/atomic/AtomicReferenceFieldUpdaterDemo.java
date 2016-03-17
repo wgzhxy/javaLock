@@ -6,6 +6,7 @@ import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 public class AtomicReferenceFieldUpdaterDemo {
 
     class DemoDataOne {
+
         Integer value1 = 12;
         Integer value2 = 12;
         Integer value3 = 13;

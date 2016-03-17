@@ -1,7 +1,7 @@
-atomic 常用工具类:
+atomic 锟斤拷锟矫癸拷锟斤拷锟斤拷:
 
-AtomicIntegerFieldUpdater 对象属性并发安全 
-AtomicMarkableReference<Object,Boolean>   对象标记, boolean
-AtomicStampedReference<Object,int>        对象标记, 整数
+AtomicIntegerFieldUpdater 锟斤拷锟斤拷锟斤拷锟皆诧拷锟斤拷锟斤拷全 
+AtomicMarkableReference<Object,Boolean>   锟斤拷锟斤拷锟斤拷, boolean
+AtomicStampedReference<Object,int>        锟斤拷锟斤拷锟斤拷, 锟斤拷锟斤拷
 
-ABA问题的解决: AtomicMarkableReference/AtomicStampedReference 在解决“ABA问题”
+ABA锟斤拷锟斤拷慕锟斤拷: AtomicMarkableReference/AtomicStampedReference 锟节斤拷锟斤拷锟紸BA锟斤拷锟解”

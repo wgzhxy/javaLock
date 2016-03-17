@@ -5,6 +5,7 @@ import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 public class AtomicIntegerFieldUpdaterDemo {
 
     class DemoData {
+
         public volatile int value1 = 1;
         volatile int        value2 = 2;
         volatile int        value3 = 3;

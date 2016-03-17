@@ -27,6 +27,7 @@ public class WaitNodityMain {
         pools.execute(new Runnable() {
             public void run() {
                 //while (true) {
+
                 synchronized (lock) {
                     try {
                         //System.out.println(this);
