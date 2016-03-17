@@ -1,11 +1,10 @@
 package javaLock;
 
 import org.junit.Test;
-import org.wanggz.lock.AtomicIntegerWithLock;
 
 /**
  * TODO Comment of LockPerformTest
- * 
+ *
  * @author guangzhong.wgz
  */
 public class LockPerformTest {
@@ -14,12 +13,12 @@ public class LockPerformTest {
 
     @Test
     public void test() throws InterruptedException {
-        // Lock锁性能测试
+        // Lock
         final int max = 10;
         final int loopCount = 100000;
         
         long costTime = 0;
-        for (int m = 0; m < max; m++) {
+        /*for (int m = 0; m < max; m++) {
             long start1 = System.currentTimeMillis();
             final AtomicIntegerWithLock value1 = new AtomicIntegerWithLock(0);
             Thread[] ts = new Thread[max];
@@ -40,14 +39,14 @@ public class LockPerformTest {
             }
             long end1 = System.currentTimeMillis();
             costTime += (end1 - start1);
-        }
+        }*/
         System.out.println("cost1: " + (costTime));
         //
         System.out.println();
         costTime = 0;
-        
-        
-        // synchronized 内存锁性测试
+
+
+        // synchronized
         final Object lock = new Object();
         for (int m = 0; m < max; m++) {
             staticValue = 0;
