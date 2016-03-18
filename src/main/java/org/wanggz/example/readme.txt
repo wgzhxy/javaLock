@@ -1,7 +1,7 @@
-atomic ³£ÓÃ¹¤¾ßÀà:
+atomic Ã¹:
 
-AtomicIntegerFieldUpdater ¶ÔÏóÊôĞÔ²¢·¢°²È« 
-AtomicMarkableReference<Object,Boolean>   ¶ÔÏó±ê¼Ç, boolean
-AtomicStampedReference<Object,int>        ¶ÔÏó±ê¼Ç, ÕûÊı
+AtomicIntegerFieldUpdater Ô²È«
+AtomicMarkableReference<Object,Boolean>   , boolean
+AtomicStampedReference<Object,int>        ,
 
-ABAÎÊÌâµÄ½â¾ö: AtomicMarkableReference/AtomicStampedReference ÔÚ½â¾ö¡°ABAÎÊÌâ¡±
+ABAÄ½: AtomicMarkableReference/AtomicStampedReference Ú½ABAâ¡±

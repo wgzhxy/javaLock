@@ -1,7 +1,7 @@
-atomic ���ù�����:
+atomic ù:
 
-AtomicIntegerFieldUpdater �������Բ�����ȫ 
-AtomicMarkableReference<Object,Boolean>   ������, boolean
-AtomicStampedReference<Object,int>        ������, ����
+AtomicIntegerFieldUpdater Բȫ
+AtomicMarkableReference<Object,Boolean>   , boolean
+AtomicStampedReference<Object,int>        ,
 
-ABA����Ľ��: AtomicMarkableReference/AtomicStampedReference �ڽ����ABA���⡱
+ABAĽ: AtomicMarkableReference/AtomicStampedReference ڽABA⡱
