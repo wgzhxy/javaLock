@@ -1,0 +1,3 @@
+grant codeBase "file:D:/workspace/TestPolicy/bin/*" {
+    permission java.io.FilePermission "d:/testPolicy.txt", "read";
+};
