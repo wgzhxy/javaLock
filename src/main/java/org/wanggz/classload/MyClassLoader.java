@@ -38,7 +38,7 @@ public class MyClassLoader extends ClassLoader {
                 int blentgh = in.available();
                 byte[] b = new byte[blentgh];
                 in.read(b);
-                c = this.defineClass(name, b, 0, blentgh);
+                c = defineClass(name, b, 0, blentgh);
             }
         } catch (Throwable e) {
         } finally {
