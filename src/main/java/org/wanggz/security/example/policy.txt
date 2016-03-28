@@ -1,0 +1,16 @@
+
+keystore "ijvmkeys.keystore";
+
+grant signedby "friend.keystore" {
+    permission java.io.FilePermission "d:/answer.txt", "read";
+    permission java.io.FilePermission "d:/question.txt", "read";
+};
+
+grant signedby "stranger.keystore" {
+	permission java.io.FilePermission "d:/question.txt", "read";
+};
+
+grant codeBase "file:D:/workspace/MyAccessControlerStack/bin/*" {
+	permission java.io.FilePermission "d:/answer.txt", "read";
+	permission java.io.FilePermission "d:/question.txt", "read";
+};
