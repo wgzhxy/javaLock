@@ -5,13 +5,12 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
-import java.nio.channels.DatagramChannel;
 import java.nio.channels.FileChannel;
 
 /**
  * Created by guangzhong.wgz on 2016/3/11.
  */
-public class IoMain {
+public class FileChannelIoMain {
 
 
     public static void main(String args[]) {
@@ -81,7 +80,7 @@ public class IoMain {
         FileOutputStream fileOut = null;
         FileChannel channel = null;
         try {
-            InputStream input = IoMain.class.getClassLoader().getResourceAsStream("test.txt");
+            InputStream input = FileChannelIoMain.class.getClassLoader().getResourceAsStream("test.txt");
             byte[] byteBuffer = new byte[1024];
 
             int size = 0;
