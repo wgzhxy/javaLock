@@ -2,17 +2,16 @@ package org.wanggz.nio.socket;
 
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
-import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 
 /**
  * Created by guangzhong.wgz on 2016/3/29.
  */
-public class ServiceSocketChannel {
+public class ServerSocketChannel {
 
     public static void ServiceSocket(int port) {
         try {
-            final ServerSocketChannel serverSocket = ServerSocketChannel.open();
+            final java.nio.channels.ServerSocketChannel serverSocket = java.nio.channels.ServerSocketChannel.open();
             serverSocket.configureBlocking(false);
 
             serverSocket.socket().setSoTimeout(5000);
@@ -68,7 +67,7 @@ public class ServiceSocketChannel {
 
     public static void serverSocketBlocking(int port) {
         try {
-            final ServerSocketChannel serverSocket = ServerSocketChannel.open();
+            final java.nio.channels.ServerSocketChannel serverSocket = java.nio.channels.ServerSocketChannel.open();
             serverSocket.configureBlocking(true);
 
             serverSocket.socket().setSoTimeout(5000);
@@ -121,7 +120,7 @@ public class ServiceSocketChannel {
     }
 
     public static void main(String args[]) {
-        ServiceSocketChannel server = new ServiceSocketChannel();
+        ServerSocketChannel server = new ServerSocketChannel();
         server.serverSocketBlocking(9090);
     }
 }
