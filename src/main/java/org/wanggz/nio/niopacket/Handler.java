@@ -1,7 +1,5 @@
 package org.wanggz.nio.niopacket;
 
-import com.sof.bas.Bytes2util;
-import com.sof.bas.Util2Bytes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -58,7 +56,7 @@ final public class Handler implements Runnable {
                 if (input.remaining() >= MESSAGE_LENGTH_HEAD) //ByteBuffer缓冲区的字节数够拼凑一个包头
                 {
                     input.get(head, 0, 4);
-                    bodylen = Util2Bytes.bytes2bigint(head);
+                    //bodylen = Util2Bytes.bytes2bigint(head);
                     logger.debug("2: remain=" + input.remaining() + " bodylen=" + bodylen);
                 } else//ByteBuffer缓冲区的字节数不够拼凑一个包头，什么操作都不做，退出这次处理，继续等待
                 {
@@ -76,7 +74,7 @@ final public class Handler implements Runnable {
                     System.arraycopy(body, 0, headandbody, head.length, body.length);
                     bodylen = -1;
                     logger.debug("4: remain=" + input.remaining() + " bodylen=" + bodylen);
-                    Bytes2util.outputHex(headandbody, 16);
+                    //Bytes2util.outputHex(headandbody, 16);
                 } else  ///缓冲区的内容不够一个包体部分，继续等待，跳出循环等待下次再出发该函数
                 {
                     System.out.println("5: remain=" + input.remaining() + " bodylen=" + bodylen);
@@ -86,7 +84,7 @@ final public class Handler implements Runnable {
             {
                 byte[] headandbody = new byte[MESSAGE_LENGTH_HEAD + bodylen];
                 System.arraycopy(head, 0, headandbody, 0, head.length);
-                Bytes2util.outputHex(headandbody, 16);
+                //Bytes2util.outputHex(headandbody, 16);
                 bodylen = -1;
             }
         }
