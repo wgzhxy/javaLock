@@ -29,7 +29,7 @@ public class ClientSocketChannel {
             socketChannel.socket().setTcpNoDelay(true);
             socketChannel.socket().setKeepAlive(true);
             socketChannel.socket().setSoTimeout(5000);
-            socketChannel.connect(new InetSocketAddress("127.0.0.1", 9090));
+            socketChannel.connect(new InetSocketAddress("127.0.0.1", 8080));
 
             // 连接是异步的
             while (true) {
@@ -43,14 +43,17 @@ public class ClientSocketChannel {
                     Thread.sleep(100);
                 }
             }
-            int readTime = 0;
+            //连接异步读
+            int readTime = 0, index = 0;
             while (true) {
                 readTime++;
+                byte[] tpByte = new byte[2048];
                 if (socketChannel.finishConnect() && socketChannel.read(buffer) > 0) {
                     buffer.flip();
                     while (buffer.hasRemaining()) {
-                        System.out.print((char) buffer.get());
+                        tpByte[index++] = buffer.get();
                     }
+                    System.out.println(new String(tpByte, "utf-8"));
                     buffer.clear();
                     break;
                 } else {
