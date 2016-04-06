@@ -1,8 +1,6 @@
 package org.wanggz.container;
 
-import java.util.Comparator;
 import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.ConcurrentSkipListMap;
 
 /**
@@ -11,11 +9,7 @@ import java.util.concurrent.ConcurrentSkipListMap;
 public class ConcurrentSkipMap {
 
     public static void main(String args[]) {
-        ConcurrentSkipListMap<Integer, String> listMap = new ConcurrentSkipListMap<Integer, String>(new Comparator<Integer>() {
-            public int compare(Integer o1, Integer o2) {
-                return o1.compareTo(o2);
-            }
-        });
+        ConcurrentSkipListMap<Integer, String> listMap = new ConcurrentSkipListMap<Integer, String>();
         for (int i = 0; i < 20; i++) {
             listMap.put(i, "goood one" + i);
         }
